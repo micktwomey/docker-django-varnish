@@ -4,13 +4,13 @@ import std;
 backend default {
     .host = "::BACKEND_PORT_8000_TCP_ADDR::";
     .port = "::BACKEND_PORT_8000_TCP_PORT::";
-    .probe = {
-        .url = "/";
-        .interval = 5s;
-        .timeout = 1 s;
-        .window = 5;
-        .threshold = 3;
-    }
+    # .probe = {
+    #     .url = "/";
+    #     .interval = 5s;
+    #     .timeout = 1 s;
+    #     .window = 5;
+    #     .threshold = 3;
+    # }
 }
 
 sub vcl_recv {
