@@ -34,6 +34,9 @@ sub vcl_backend_response {
         unset beresp.http.set-cookie;
         set beresp.ttl = 1h;
     }
+    else {
+        set beresp.ttl = 10s;
+    }
     # # Add some grace for backend restarts
     # set beresp.grace = 30m;
 }
